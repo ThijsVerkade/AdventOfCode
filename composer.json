@@ -3,7 +3,7 @@
   "description": "All the solutions for Advent of Code",
   "autoload": {
     "psr-4": {
-      "ThijsVerkade\\AdventOfCode\\": "src/"
+      "AdventOfCode\\": "src/"
     }
   },
   "authors": [

@@ -2,13 +2,11 @@
 
 declare(strict_types=1);
 
-use Year2022\DayTen\Solver;
-
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$day = new Solver();
+$day = new AdventOfCode\Year2022\Day1\Solver();
 
 echo "SolutionOne:";
 $day->solutionOne();
-echo "SolutionTwo:";
+echo "\nSolutionTwo:";
 $day->solutionTwo();

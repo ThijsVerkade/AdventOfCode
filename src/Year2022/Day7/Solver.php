@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Year2022\DaySeven;
+namespace AdventOfCode\Year2022\Day7;
 
-use SolverInterface;
+use AdventOfCode\SolverInterface;
 
 class Solver implements SolverInterface
 {

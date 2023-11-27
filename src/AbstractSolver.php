@@ -2,7 +2,22 @@
 
 declare(strict_types=1);
 
-final class AbstractSolver
-{
+namespace AdventOfCode;
 
+use AdventOfCode\Enums\Scenario;
+use Exception;
+
+abstract class AbstractSolver
+{
+    public function getTestScenario(string $dir, Scenario $name = Scenario::testScenario1): array
+    {
+        $path = sprintf('%s/%s.txt', $dir, $name->value);
+        $file = file($path);
+
+        if (!$file) {
+            throw new Exception(sprintf('%s file is not found', $file));
+        }
+
+        return $file;
+    }
 }

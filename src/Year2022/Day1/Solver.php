@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Year2022\DayOne;
+namespace AdventOfCode\Year2022\Day1;
 
-use SolverInterface;
+use AdventOfCode\AbstractSolver;
+use AdventOfCode\SolverInterface;
 
-class Solver implements SolverInterface
+class Solver extends AbstractSolver implements SolverInterface
 {
     public function solutionOne(): void
     {
@@ -15,7 +16,7 @@ class Solver implements SolverInterface
 
     private function formula(): array
     {
-        $fh = file(__DIR__ . '/test_scenario_1.txt');
+        $fh = $this->getTestScenario(__DIR__);
 
         $total = 0;
         $temp = 0;
