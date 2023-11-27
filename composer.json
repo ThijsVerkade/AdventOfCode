@@ -1,0 +1,16 @@
+{
+  "name": "thijs.verkade/advent-of-code",
+  "description": "All the solutions for Advent of Code",
+  "autoload": {
+    "psr-4": {
+      "ThijsVerkade\\AdventOfCode\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Thijs Verkade",
+      "email": "thijs-verkade@hotmail.nl"
+    }
+  ],
+  "require": {}
+}
