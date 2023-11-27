@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Day;
+namespace Year2022\DaySeven;
 
-use Day;
+use SolverInterface;
 
-class DaySeven implements Day
+class Solver implements SolverInterface
 {
     public function solutionOne(): void
     {
@@ -15,7 +15,7 @@ class DaySeven implements Day
 
     public function calculate(): void
     {
-        $myFile = file(__DIR__ . '/day_seven.txt');
+        $myFile = file(__DIR__ . '/test_scenario_1.txt');
 
         $parent = '';
         $array[''] = [

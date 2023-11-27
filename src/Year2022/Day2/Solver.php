@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Day;
+namespace Year2022\DayTwo;
 
-use Day;
+use SolverInterface;
 
-class DayTwo implements Day
+class Solver implements SolverInterface
 {
     public function solutionOne(): void
     {
@@ -33,7 +33,7 @@ class DayTwo implements Day
             ],
         ];
 
-        $fh = file(__DIR__ . '/day_two.txt');
+        $fh = file(__DIR__ . '/test_scenario_1.txt');
 
         $shapeScore = [
             'A' => 1, //Rock

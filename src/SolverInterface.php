@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-interface Day
+interface SolverInterface
 {
     public function solutionOne(): void;
 

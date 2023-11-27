@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Day;
+namespace Year2022\DayFour;
 
-use Day;
+use SolverInterface;
 
-class DayFour implements Day
+class Solver implements SolverInterface
 {
     public function solutionOne(): void
     {
@@ -15,7 +15,7 @@ class DayFour implements Day
 
     private function formula($overlapAtAll = false): int
     {
-        $file = file(__DIR__ . '/day_four.txt');
+        $file = file(__DIR__ . '/test_scenario_1.txt');
 
         $count = 0;
 

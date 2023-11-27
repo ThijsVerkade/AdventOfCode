@@ -2,15 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Day;
+namespace Year2022\DayOne;
 
-use Day;
+use SolverInterface;
 
-class DayOne implements Day
+class Solver implements SolverInterface
 {
+    public function solutionOne(): void
+    {
+        echo $this->formula()['total'];
+    }
+
     private function formula(): array
     {
-        $fh = file(__DIR__.'/day_one.txt');
+        $fh = file(__DIR__ . '/test_scenario_1.txt');
 
         $total = 0;
         $temp = 0;
@@ -28,19 +33,13 @@ class DayOne implements Day
                 continue;
             }
 
-            $temp = $temp + (int)$item;
+            $temp += (int)$item;
         }
 
         return [
             'total' => $total,
             'array' => $array,
         ];
-    }
-
-
-    public function solutionOne(): void
-    {
-        echo $this->formula()['total'];
     }
 
     public function solutionTwo(): void

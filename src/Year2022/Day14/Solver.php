@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Day;
+namespace Year2022\DayFourTeen;
 
-use Day;
+use SolverInterface;
 
-class DayFourTeen implements Day
+class Solver implements SolverInterface
 {
     public function solutionOne(): void
     {
