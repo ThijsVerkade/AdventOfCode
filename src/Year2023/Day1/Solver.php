@@ -15,19 +15,19 @@ final class Solver extends AbstractSolver implements SolverInterface
         $file = $this->getTestScenario(__DIR__);
         $total = 0;
         foreach ($file as $row) {
-            $firstNumber = null;
-            $lastNumber = null;
-            foreach (str_split($row) as $item) {
-                if (is_numeric($item)) {
-                    if (is_null($firstNumber)) {
-                        $firstNumber = $item;
-                    }
-                    $lastNumber = $item;
-                }
-            }
-            $total += (int)($firstNumber . $lastNumber);
+            $total += $this->calculate($row);
         }
         echo $total;
+    }
+
+    private function calculate(string $row): int
+    {
+        preg_match_all('/[0-9]/', $row, $values);
+
+        $firstNumber = current($values[0]);
+        $lastNumber = end($values[0]);
+
+        return (int)($firstNumber . $lastNumber);
     }
 
     public function solutionTwo(): void
@@ -64,20 +64,5 @@ final class Solver extends AbstractSolver implements SolverInterface
             'eight' => 8,
             'nine' => 9
         };
-    }
-
-    private function calculate(string $row): int
-    {
-        $firstNumber = null;
-        $lastNumber = null;
-        foreach (str_split($row) as $item) {
-            if (is_numeric($item)) {
-                if (is_null($firstNumber)) {
-                    $firstNumber = $item;
-                }
-                $lastNumber = $item;
-            }
-        }
-        return (int)($firstNumber . $lastNumber);
     }
 }
