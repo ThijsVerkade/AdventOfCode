@@ -12,5 +12,7 @@
       "email": "thijs-verkade@hotmail.nl"
     }
   ],
-  "require": {}
+  "require": {
+    "ext-gmp": "*"
+  }
 }
