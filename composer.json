@@ -1,18 +1,32 @@
 {
-  "name": "thijs.verkade/advent-of-code",
-  "description": "All the solutions for Advent of Code",
-  "autoload": {
-    "psr-4": {
-      "AdventOfCode\\": "src/"
+    "name": "thijs.verkade/advent-of-code",
+    "description": "All the solutions for Advent of Code",
+    "autoload": {
+        "psr-4": {
+            "AdventOfCode\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thijs Verkade",
+            "email": "thijs-verkade@hotmail.nl"
+        }
+    ],
+    "require": {
+        "ext-gmp": "*",
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phabel/phabel": "1.0.58.80"
+    },
+    "config": {
+        "allow-plugins": {
+            "phabel/phabel": true
+        }
+    },
+    "extra": {
+        "phabel": {
+            "revision": 0
+        }
     }
-  },
-  "authors": [
-    {
-      "name": "Thijs Verkade",
-      "email": "thijs-verkade@hotmail.nl"
-    }
-  ],
-  "require": {
-    "ext-gmp": "*"
-  }
 }
